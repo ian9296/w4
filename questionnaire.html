@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大學生活習慣調查</title>
+    <style>
+        body {
+            font-family: Arial, "Microsoft JhengHei", sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+
+        h1 {
+            text-align: center;
+            color: #294c70;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        fieldset {
+            border: 1px solid #aab8c5;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        legend {
+            font-weight: bold;
+            color: #294c70;
+            font-size: 18px;
+        }
+
+        label {
+            display: block;
+            margin: 6px 0;
+        }
+
+        input, select, textarea {
+            padding: 8px;
+            margin-top: 5px;
+            max-width: 100%;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="date"],
+        select {
+            width: 95%;
+        }
+
+        textarea {
+            width: 95%;
+            min-height: 90px;
+        }
+
+        button {
+            padding: 10px 25px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button[type="submit"] {
+            background-color: #294c70;
+            color: white;
+        }
+
+        button[type="reset"] {
+            background-color: #cccccc;
+        }
+
+        .buttons {
+            text-align: center;
+        }
+
+        .description {
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>大學生生活習慣調查</h1>
+	
+    <p>
+        本問卷想了解當代大學生,請如實回答
+    </p>
+
+    <form action="#" method="post">
+
+        <!-- 第1題：是非題 checkbox -->
+        <fieldset>
+            <legend>第1題：早上起床是否會覺得疲累（是非題）</legend>
+            
+
+            <label>
+                <input type="checkbox" name="q1" value="是">
+                是
+            </label>
+
+            
+        </fieldset>
+
+        <!-- 第2題：單選 radio -->
+        <fieldset>
+            <legend>第2題：來學校的方式（單選題）</legend>
+            
+            <label>
+                <input type="radio" name="q2" value="走路" required>
+                走路
+            </label>
+
+            <label>
+                <input type="radio" name="q2" value="騎機車">
+                騎機車
+            </label>
+
+            <label>
+                <input type="radio" name="q2" value="搭火車">
+                搭火車
+            </label>
+
+            <label>
+                <input type="radio" name="q2" value="開車">
+                開車
+            </label>
+        </fieldset>
+
+        <!-- 第3題：單選 select -->
+        <fieldset>
+            <legend>第3題：吃什麼早餐（單選題）</legend>
+          
+            <select name="q3" required>
+                <option value="">請選擇</option>
+                <option value="飯">飯</option>
+                <option value="麵">麵</option>
+                <option value="蛋餅">蛋餅</option>
+                <option value="吐司">吐司</option>
+                <option value="不吃">不吃</option>
+            </select>
+        </fieldset>
+
+        <!-- 第4題：複選 checkbox -->
+        <fieldset>
+            <legend>第4題：最常喝的飲料（複選題）</legend>
+            
+              
+            <label>
+                <input type="checkbox" name="q4[]" value="紅茶">
+                紅茶
+            </label>
+
+            <label>
+                <input type="checkbox" name="q4[]" value="奶茶">
+                奶茶
+            </label>
+
+            <label>
+                <input type="checkbox" name="q4[]" value="綠茶">
+                綠茶
+            </label>
+
+            <label>
+                <input type="checkbox" name="q4[]" value="水">
+                水
+            </label>
+
+            <label>
+                <input type="checkbox" name="q4[]" value="其他">
+                其他
+            </label>
+        </fieldset>
+
+        <!-- 第5題：複選 select -->
+        <fieldset>
+            <legend>第5題：喜歡的時間（複選題）</legend>
+            <p class="description">
+                說明：請按住 Ctrl（Mac 使用 Command）選擇多個答案。
+            </p>
+
+          
+            <select name="q5[]" multiple size="5">
+                <option value="早上">早上</option>
+                <option value="中午">中午</option>
+                <option value="下午">下午</option>
+                <option value="晚上">晚上</option>
+                <option value="半夜">半夜</option>
+            </select>
+        </fieldset>
+
+        <!-- 第6題：文字輸入 -->
+        <fieldset>
+            <legend>第6題：平時都用什麼品牌的手機（填充題）</legend>
+            
+            <input type="text" name="q6"
+                   placeholder="例如：Apple, Samaung">
+        </fieldset>
+
+        <!-- 第7題：數字輸入 -->
+        <fieldset>
+            <legend>第7題：每日看手機的時長（填充題）</legend>
+           
+            <input type="number" name="q7"
+                   min="0" max="24" step="0.5"
+                   placeholder="請輸入小時">
+        </fieldset>
+
+        <!-- 第8題：日期輸入 -->
+        <fieldset>
+            <legend>第8題：出生年月日（填充題）</legend>
+           
+
+            <input type="date" name="q8">
+        </fieldset>
+
+        <!-- 第9題：問答 textarea -->
+        <fieldset>
+            <legend>第9題：大學中最印象深刻的事（問答題）</legend>
+            
+
+            <textarea name="q9" rows="4"
+                      placeholder="請在此輸入您的回答..."></textarea>
+        </fieldset>
+
+        <!-- 送出及重設按鈕 -->
+        <div class="buttons">
+            <button type="submit">送出</button>
+            <button type="reset">重設</button>
+        </div>
+
+    </form>
+
+</div>
+
+</body>
+</html>
